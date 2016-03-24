@@ -6,11 +6,17 @@ angular
         templateUrl: "templates/index.html",
         controller: "HomeController"
       })
+      //added items on the page
       .when('/itempage/:id',{
         templateUrl: "templates/one.html",
         controller: "HomeController"
       })
-
+      // added single item on the page
+      .when('/cartpage/',{
+        templateUrl: "templates/cart.html",
+        controller: "CartController"
+      })
+      //adding cart page
       .when('/404',{
             template: '<h1> Great, you messed up!</h1>',
             controller: 'HomeController'

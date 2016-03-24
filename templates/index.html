@@ -1,13 +1,14 @@
-<div class="col-md-12">
+<div class="col-md-6">
   <h3>Current products</h3>
 
 </div>
 
-<div ng-repeat="listing in listings" class="">
+<div ng-repeat="listing in listings" class="col-md-4 col-md-6">
   <p class="text-muted">
-       title: {{listing.title}} | price: {{listing.price}}
+       Title: {{listing.title}} | Price: {{listing.price}}
   </p>
   <img src="{{listing.MainImage.url_75x75}}" alt="Image" class="img-rounded" />
   <a href="/#/itempage/{{listing.listing_id}}"><button class="btn btn-success" type="button" name="button">Show product</button></a>
-  <a href="/#/"><button class="btn btn-info" type="button" name="button">Add to cart</button></a>
+  <button ng-click="addItemToCart(listing)"  class="btn btn-info" type="button" name="button">Add to cart</button>
+  <a href="/#/cartpage"><button type="button" class="btn btn-primary" type="button" name="button">Check out</button></a>
 </div>

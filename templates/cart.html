@@ -1,0 +1,13 @@
+<div class="row-two">
+  <h3>Your shopping cart</h3>
+    <a href="/#/"><button class="btn btn-warning" type="button" name="button">Return home</button></a>
+
+</div>
+
+<div ng-repeat="listing in listings" class="">
+  <img ng-src="{{listing.MainImage.url_75x75}}" alt="product-image" />
+    <p>Title: {{ listing.title }}</p>
+
+  <button class="btn btn-danger" type="button" name="button">Delete item</button>
+
+</div>
